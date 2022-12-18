@@ -1,9 +1,9 @@
 pipeline {
-	agent {  label 'linux-node' }
+	agent {  label 'linux-node1' }
 	stages {
 		stage('---clean----'){
 			tools {
-				maven 'maven_3.8.6'
+				maven 'maven-3.8.6'
 			}
 			steps {
 				sh 'mvn --version'
@@ -12,7 +12,7 @@ pipeline {
 		}
 		stage('---test---') {
 			tools {
-				maven 'maven_3.8.4'
+				maven 'maven-3.8.4'
 			}
 			steps {
 				sh 'mvn --version'
@@ -21,7 +21,7 @@ pipeline {
 		}
 		stage('---package---'){
 			tools {
-				maven 'maven_3.8.1'
+				maven 'maven-3.8.4'
 			}
 			
 			steps {
