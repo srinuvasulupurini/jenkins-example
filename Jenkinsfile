@@ -1,8 +1,10 @@
 pipeline {
-	agent {  
+	agent {
+		node {
 		label 'linux-node1'
 		customWorkspace '/home/ec2-user/newjen-git-ws'
 	      }
+	}
 	stages {
 		stage('---clean----'){
 			tools {
